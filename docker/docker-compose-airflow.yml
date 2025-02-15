@@ -21,6 +21,7 @@ services:
             - ../logs:/opt/airflow/logs
             - ../spark-scripts:/spark-scripts
             - ../scripts:/scripts
+            - ../data:/data
 
     webserver:
         image: finprode8-ratih/airflow

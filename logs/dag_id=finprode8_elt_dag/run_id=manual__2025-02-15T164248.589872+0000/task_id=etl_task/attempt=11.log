@@ -1,0 +1,186 @@
+[2025-02-15T17:06:19.178+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-15T17:06:19.198+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: finprode8_elt_dag.etl_task manual__2025-02-15T16:42:48.589872+00:00 [queued]>
+[2025-02-15T17:06:19.209+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: finprode8_elt_dag.etl_task manual__2025-02-15T16:42:48.589872+00:00 [queued]>
+[2025-02-15T17:06:19.213+0000] {taskinstance.py:2866} INFO - Starting attempt 11 of 11
+[2025-02-15T17:06:19.228+0000] {taskinstance.py:2889} INFO - Executing <Task(SparkSubmitOperator): etl_task> on 2025-02-15 16:42:48.589872+00:00
+[2025-02-15T17:06:19.234+0000] {standard_task_runner.py:72} INFO - Started process 6828 to run task
+[2025-02-15T17:06:19.238+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', '***_elt_dag', 'etl_task', 'manual__2025-02-15T16:42:48.589872+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/***_etl_dag.py', '--cfg-path', '/tmp/tmp47u7kcdg']
+[2025-02-15T17:06:19.242+0000] {standard_task_runner.py:105} INFO - Job 26: Subtask etl_task
+[2025-02-15T17:06:19.260+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-02-15T17:06:19.303+0000] {task_command.py:467} INFO - Running <TaskInstance: finprode8_elt_dag.etl_task manual__2025-02-15T16:42:48.589872+00:00 [running]> on host ***-airflow-scheduler
+[2025-02-15T17:06:19.395+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ratih malini' AIRFLOW_CTX_DAG_ID='***_elt_dag' AIRFLOW_CTX_TASK_ID='etl_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-15T16:42:48.589872+00:00' AIRFLOW_CTX_TRY_NUMBER='11' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-15T16:42:48.589872+00:00'
+[2025-02-15T17:06:19.397+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-15T17:06:19.431+0000] {base.py:84} INFO - Retrieving connection 'spark_main'
+[2025-02-15T17:06:19.434+0000] {spark_submit.py:474} INFO - Spark-Submit cmd: spark-submit --master spark://***-spark-master:7077 --packages org.postgresql:postgresql:42.2.18 --name arrow-spark /spark-scripts/***_etl.py
+[2025-02-15T17:06:20.641+0000] {spark_submit.py:641} INFO - :: loading settings :: url = jar:file:/home/airflow/.local/lib/python3.9/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-02-15T17:06:20.772+0000] {spark_submit.py:641} INFO - Ivy Default Cache set to: /home/airflow/.ivy2/cache
+[2025-02-15T17:06:20.774+0000] {spark_submit.py:641} INFO - The jars for the packages stored in: /home/airflow/.ivy2/jars
+[2025-02-15T17:06:20.778+0000] {spark_submit.py:641} INFO - org.postgresql#postgresql added as a dependency
+[2025-02-15T17:06:20.779+0000] {spark_submit.py:641} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-0d160cb3-7dcb-4c64-b58f-7189277efb06;1.0
+[2025-02-15T17:06:20.781+0000] {spark_submit.py:641} INFO - confs: [default]
+[2025-02-15T17:06:20.937+0000] {spark_submit.py:641} INFO - found org.postgresql#postgresql;42.2.18 in central
+[2025-02-15T17:06:20.968+0000] {spark_submit.py:641} INFO - found org.checkerframework#checker-qual;3.5.0 in central
+[2025-02-15T17:06:20.998+0000] {spark_submit.py:641} INFO - :: resolution report :: resolve 215ms :: artifacts dl 5ms
+[2025-02-15T17:06:21.000+0000] {spark_submit.py:641} INFO - :: modules in use:
+[2025-02-15T17:06:21.001+0000] {spark_submit.py:641} INFO - org.checkerframework#checker-qual;3.5.0 from central in [default]
+[2025-02-15T17:06:21.002+0000] {spark_submit.py:641} INFO - org.postgresql#postgresql;42.2.18 from central in [default]
+[2025-02-15T17:06:21.003+0000] {spark_submit.py:641} INFO - ---------------------------------------------------------------------
+[2025-02-15T17:06:21.004+0000] {spark_submit.py:641} INFO - |                  |            modules            ||   artifacts   |
+[2025-02-15T17:06:21.005+0000] {spark_submit.py:641} INFO - |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-02-15T17:06:21.005+0000] {spark_submit.py:641} INFO - ---------------------------------------------------------------------
+[2025-02-15T17:06:21.006+0000] {spark_submit.py:641} INFO - |      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2025-02-15T17:06:21.007+0000] {spark_submit.py:641} INFO - ---------------------------------------------------------------------
+[2025-02-15T17:06:21.008+0000] {spark_submit.py:641} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-0d160cb3-7dcb-4c64-b58f-7189277efb06
+[2025-02-15T17:06:21.009+0000] {spark_submit.py:641} INFO - confs: [default]
+[2025-02-15T17:06:21.010+0000] {spark_submit.py:641} INFO - 0 artifacts copied, 2 already retrieved (0kB/6ms)
+[2025-02-15T17:06:21.226+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:21 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-02-15T17:06:22.172+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO SparkContext: Running Spark version 3.3.2
+[2025-02-15T17:06:22.192+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO ResourceUtils: ==============================================================
+[2025-02-15T17:06:22.194+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2025-02-15T17:06:22.195+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO ResourceUtils: ==============================================================
+[2025-02-15T17:06:22.197+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO SparkContext: Submitted application: ***
+[2025-02-15T17:06:22.213+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2025-02-15T17:06:22.221+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO ResourceProfile: Limiting resource is cpu
+[2025-02-15T17:06:22.222+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2025-02-15T17:06:22.257+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO SecurityManager: Changing view acls to: airflow
+[2025-02-15T17:06:22.259+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO SecurityManager: Changing modify acls to: airflow
+[2025-02-15T17:06:22.261+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO SecurityManager: Changing view acls groups to:
+[2025-02-15T17:06:22.262+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO SecurityManager: Changing modify acls groups to:
+[2025-02-15T17:06:22.264+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(airflow); groups with view permissions: Set(); users  with modify permissions: Set(airflow); groups with modify permissions: Set()
+[2025-02-15T17:06:22.468+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO Utils: Successfully started service 'sparkDriver' on port 35387.
+[2025-02-15T17:06:22.493+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO SparkEnv: Registering MapOutputTracker
+[2025-02-15T17:06:22.523+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO SparkEnv: Registering BlockManagerMaster
+[2025-02-15T17:06:22.538+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2025-02-15T17:06:22.540+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2025-02-15T17:06:22.542+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2025-02-15T17:06:22.568+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-f07a730e-7563-4e65-b88e-163449fb886c
+[2025-02-15T17:06:22.583+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2025-02-15T17:06:22.597+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO SparkEnv: Registering OutputCommitCoordinator
+[2025-02-15T17:06:22.757+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2025-02-15T17:06:22.814+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO SparkContext: Added JAR /spark-scripts/jars/postgresql-42.2.18.jar at spark://***-airflow-scheduler:35387/jars/postgresql-42.2.18.jar with timestamp 1739639182166
+[2025-02-15T17:06:22.816+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO SparkContext: Added file file:///home/airflow/.ivy2/jars/org.postgresql_postgresql-42.2.18.jar at file:///home/airflow/.ivy2/jars/org.postgresql_postgresql-42.2.18.jar with timestamp 1739639182166
+[2025-02-15T17:06:22.818+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO Utils: Copying /home/airflow/.ivy2/jars/org.postgresql_postgresql-42.2.18.jar to /tmp/spark-02dfc455-b4a1-4008-9ffc-28dbe4033c52/userFiles-e0438533-aa91-4a3e-a5ad-5cdfb66a8196/org.postgresql_postgresql-42.2.18.jar
+[2025-02-15T17:06:22.832+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO SparkContext: Added file file:///home/airflow/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar at file:///home/airflow/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar with timestamp 1739639182166
+[2025-02-15T17:06:22.834+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO Utils: Copying /home/airflow/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar to /tmp/spark-02dfc455-b4a1-4008-9ffc-28dbe4033c52/userFiles-e0438533-aa91-4a3e-a5ad-5cdfb66a8196/org.checkerframework_checker-qual-3.5.0.jar
+[2025-02-15T17:06:22.902+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO Executor: Starting executor ID driver on host ***-airflow-scheduler
+[2025-02-15T17:06:22.908+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2025-02-15T17:06:22.917+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO Executor: Fetching file:///home/airflow/.ivy2/jars/org.postgresql_postgresql-42.2.18.jar with timestamp 1739639182166
+[2025-02-15T17:06:22.937+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO Utils: /home/airflow/.ivy2/jars/org.postgresql_postgresql-42.2.18.jar has been previously copied to /tmp/spark-02dfc455-b4a1-4008-9ffc-28dbe4033c52/userFiles-e0438533-aa91-4a3e-a5ad-5cdfb66a8196/org.postgresql_postgresql-42.2.18.jar
+[2025-02-15T17:06:22.944+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO Executor: Fetching file:///home/airflow/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar with timestamp 1739639182166
+[2025-02-15T17:06:22.946+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO Utils: /home/airflow/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar has been previously copied to /tmp/spark-02dfc455-b4a1-4008-9ffc-28dbe4033c52/userFiles-e0438533-aa91-4a3e-a5ad-5cdfb66a8196/org.checkerframework_checker-qual-3.5.0.jar
+[2025-02-15T17:06:22.958+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO Executor: Fetching spark://***-airflow-scheduler:35387/jars/postgresql-42.2.18.jar with timestamp 1739639182166
+[2025-02-15T17:06:22.993+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO TransportClientFactory: Successfully created connection to ***-airflow-scheduler/172.19.0.6:35387 after 25 ms (0 ms spent in bootstraps)
+[2025-02-15T17:06:22.998+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:22 INFO Utils: Fetching spark://***-airflow-scheduler:35387/jars/postgresql-42.2.18.jar to /tmp/spark-02dfc455-b4a1-4008-9ffc-28dbe4033c52/userFiles-e0438533-aa91-4a3e-a5ad-5cdfb66a8196/fetchFileTemp11701571851038421654.tmp
+[2025-02-15T17:06:23.084+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:23 INFO Executor: Adding file:/tmp/spark-02dfc455-b4a1-4008-9ffc-28dbe4033c52/userFiles-e0438533-aa91-4a3e-a5ad-5cdfb66a8196/postgresql-42.2.18.jar to class loader
+[2025-02-15T17:06:23.090+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:23 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42425.
+[2025-02-15T17:06:23.092+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:23 INFO NettyBlockTransferService: Server created on ***-airflow-scheduler:42425
+[2025-02-15T17:06:23.093+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:23 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2025-02-15T17:06:23.098+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:23 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ***-airflow-scheduler, 42425, None)
+[2025-02-15T17:06:23.102+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:23 INFO BlockManagerMasterEndpoint: Registering block manager ***-airflow-scheduler:42425 with 434.4 MiB RAM, BlockManagerId(driver, ***-airflow-scheduler, 42425, None)
+[2025-02-15T17:06:23.104+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:23 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ***-airflow-scheduler, 42425, None)
+[2025-02-15T17:06:23.105+0000] {spark_submit.py:641} INFO - 25/02/15 17:06:23 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ***-airflow-scheduler, 42425, None)
+[2025-02-15T17:06:27.161+0000] {spark_submit.py:641} INFO - ---------------- MENAMPILKAN DATASET ----------------
+[2025-02-15T17:06:27.441+0000] {spark_submit.py:641} INFO - +-----------+-----------------+---------+---------------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-15T17:06:27.443+0000] {spark_submit.py:641} INFO - |employee_id|       department|   region|      education|gender|recruitment_channel|no_of_trainings|age|previous_year_rating|length_of_service|KPIs_met_more_than_80|awards_won|avg_training_score|
+[2025-02-15T17:06:27.444+0000] {spark_submit.py:641} INFO - +-----------+-----------------+---------+---------------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-15T17:06:27.445+0000] {spark_submit.py:641} INFO - |       8724|       Technology|region_26|      Bachelors|     m|           sourcing|              1| 24|                null|                1|                    1|         0|                77|
+[2025-02-15T17:06:27.446+0000] {spark_submit.py:641} INFO - |      74430|               HR| region_4|      Bachelors|     f|              other|              1| 31|                   3|                5|                    0|         0|                51|
+[2025-02-15T17:06:27.447+0000] {spark_submit.py:641} INFO - |      72255|Sales & Marketing|region_13|      Bachelors|     m|              other|              1| 31|                   1|                4|                    0|         0|                47|
+[2025-02-15T17:06:27.449+0000] {spark_submit.py:641} INFO - |      38562|      Procurement| region_2|      Bachelors|     f|              other|              3| 31|                   2|                9|                    0|         0|                65|
+[2025-02-15T17:06:27.450+0000] {spark_submit.py:641} INFO - |      64486|          Finance|region_29|      Bachelors|     m|           sourcing|              1| 30|                   4|                7|                    0|         0|                61|
+[2025-02-15T17:06:27.452+0000] {spark_submit.py:641} INFO - |      46232|      Procurement| region_7|      Bachelors|     m|           sourcing|              1| 36|                   3|                2|                    0|         0|                68|
+[2025-02-15T17:06:27.454+0000] {spark_submit.py:641} INFO - |      54542|          Finance| region_2|      Bachelors|     m|              other|              1| 33|                   5|                3|                    1|         0|                57|
+[2025-02-15T17:06:27.457+0000] {spark_submit.py:641} INFO - |      67269|        Analytics|region_22|      Bachelors|     m|           sourcing|              2| 36|                   3|                3|                    0|         0|                85|
+[2025-02-15T17:06:27.458+0000] {spark_submit.py:641} INFO - |      66174|       Technology| region_7|Masters & above|     m|              other|              1| 51|                   4|               11|                    0|         0|                75|
+[2025-02-15T17:06:27.460+0000] {spark_submit.py:641} INFO - |      76303|       Technology|region_22|      Bachelors|     m|           sourcing|              1| 29|                   5|                2|                    1|         0|                76|
+[2025-02-15T17:06:27.461+0000] {spark_submit.py:641} INFO - +-----------+-----------------+---------+---------------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-15T17:06:27.463+0000] {spark_submit.py:641} INFO - only showing top 10 rows
+[2025-02-15T17:06:27.464+0000] {spark_submit.py:641} INFO - 
+[2025-02-15T17:06:27.465+0000] {spark_submit.py:641} INFO - ---------------- MENAMPILKAN TIPE DATA AWAL ----------------
+[2025-02-15T17:06:27.467+0000] {spark_submit.py:641} INFO - root
+[2025-02-15T17:06:27.469+0000] {spark_submit.py:641} INFO - |-- employee_id: string (nullable = true)
+[2025-02-15T17:06:27.472+0000] {spark_submit.py:641} INFO - |-- department: string (nullable = true)
+[2025-02-15T17:06:27.474+0000] {spark_submit.py:641} INFO - |-- region: string (nullable = true)
+[2025-02-15T17:06:27.475+0000] {spark_submit.py:641} INFO - |-- education: string (nullable = true)
+[2025-02-15T17:06:27.477+0000] {spark_submit.py:641} INFO - |-- gender: string (nullable = true)
+[2025-02-15T17:06:27.478+0000] {spark_submit.py:641} INFO - |-- recruitment_channel: string (nullable = true)
+[2025-02-15T17:06:27.479+0000] {spark_submit.py:641} INFO - |-- no_of_trainings: string (nullable = true)
+[2025-02-15T17:06:27.480+0000] {spark_submit.py:641} INFO - |-- age: string (nullable = true)
+[2025-02-15T17:06:27.481+0000] {spark_submit.py:641} INFO - |-- previous_year_rating: string (nullable = true)
+[2025-02-15T17:06:27.483+0000] {spark_submit.py:641} INFO - |-- length_of_service: string (nullable = true)
+[2025-02-15T17:06:27.485+0000] {spark_submit.py:641} INFO - |-- KPIs_met_more_than_80: string (nullable = true)
+[2025-02-15T17:06:27.487+0000] {spark_submit.py:641} INFO - |-- awards_won: string (nullable = true)
+[2025-02-15T17:06:27.489+0000] {spark_submit.py:641} INFO - |-- avg_training_score: string (nullable = true)
+[2025-02-15T17:06:27.491+0000] {spark_submit.py:641} INFO - 
+[2025-02-15T17:06:27.583+0000] {spark_submit.py:641} INFO - ---------------- MENAMPILKAN TIPE DATA HASIL TRANSFORMASI ----------------
+[2025-02-15T17:06:27.586+0000] {spark_submit.py:641} INFO - root
+[2025-02-15T17:06:27.589+0000] {spark_submit.py:641} INFO - |-- employee_id: string (nullable = true)
+[2025-02-15T17:06:27.590+0000] {spark_submit.py:641} INFO - |-- department: string (nullable = true)
+[2025-02-15T17:06:27.591+0000] {spark_submit.py:641} INFO - |-- region: string (nullable = true)
+[2025-02-15T17:06:27.592+0000] {spark_submit.py:641} INFO - |-- education: string (nullable = true)
+[2025-02-15T17:06:27.594+0000] {spark_submit.py:641} INFO - |-- gender: string (nullable = true)
+[2025-02-15T17:06:27.595+0000] {spark_submit.py:641} INFO - |-- recruitment_channel: string (nullable = true)
+[2025-02-15T17:06:27.597+0000] {spark_submit.py:641} INFO - |-- no_of_trainings: integer (nullable = true)
+[2025-02-15T17:06:27.598+0000] {spark_submit.py:641} INFO - |-- age: integer (nullable = true)
+[2025-02-15T17:06:27.599+0000] {spark_submit.py:641} INFO - |-- previous_year_rating: integer (nullable = true)
+[2025-02-15T17:06:27.600+0000] {spark_submit.py:641} INFO - |-- length_of_service: integer (nullable = true)
+[2025-02-15T17:06:27.602+0000] {spark_submit.py:641} INFO - |-- KPIs_met_more_than_80: integer (nullable = true)
+[2025-02-15T17:06:27.604+0000] {spark_submit.py:641} INFO - |-- awards_won: integer (nullable = true)
+[2025-02-15T17:06:27.606+0000] {spark_submit.py:641} INFO - |-- avg_training_score: integer (nullable = true)
+[2025-02-15T17:06:27.607+0000] {spark_submit.py:641} INFO - 
+[2025-02-15T17:06:27.608+0000] {spark_submit.py:641} INFO - ---------------- MENAMPILKAN BANYAK DATA NULL DI SETIAP KOLOM ----------------
+[2025-02-15T17:06:28.656+0000] {spark_submit.py:641} INFO - +----------------+---------------+-----------+--------------+-----------+------------------------+--------------------+--------+-------------------------+----------------------+--------------------------+---------------+-----------------------+
+[2025-02-15T17:06:28.658+0000] {spark_submit.py:641} INFO - |employee_id_null|department_null|region_null|education_null|gender_null|recruitment_channel_null|no_of_trainings_null|age_null|previous_year_rating_null|length_of_service_null|KPIs_met_more_than_80_null|awards_won_null|avg_training_score_nuli|
+[2025-02-15T17:06:28.659+0000] {spark_submit.py:641} INFO - +----------------+---------------+-----------+--------------+-----------+------------------------+--------------------+--------+-------------------------+----------------------+--------------------------+---------------+-----------------------+
+[2025-02-15T17:06:28.661+0000] {spark_submit.py:641} INFO - |               0|              0|          0|           771|          0|                       0|                   0|       0|                     1363|                     0|                         0|              0|                      0|
+[2025-02-15T17:06:28.662+0000] {spark_submit.py:641} INFO - +----------------+---------------+-----------+--------------+-----------+------------------------+--------------------+--------+-------------------------+----------------------+--------------------------+---------------+-----------------------+
+[2025-02-15T17:06:28.663+0000] {spark_submit.py:641} INFO - 
+[2025-02-15T17:06:28.665+0000] {spark_submit.py:641} INFO - ---------------- NULL HANDLING PADA KOLOM EDUCATION & PREVIOUS_YEAR_RATING ----------------
+[2025-02-15T17:06:28.982+0000] {spark_submit.py:641} INFO - +--------------+-------------------------+
+[2025-02-15T17:06:28.986+0000] {spark_submit.py:641} INFO - |education_null|previous_year_rating_null|
+[2025-02-15T17:06:28.988+0000] {spark_submit.py:641} INFO - +--------------+-------------------------+
+[2025-02-15T17:06:28.989+0000] {spark_submit.py:641} INFO - |             0|                        0|
+[2025-02-15T17:06:28.990+0000] {spark_submit.py:641} INFO - +--------------+-------------------------+
+[2025-02-15T17:06:28.992+0000] {spark_submit.py:641} INFO - 
+[2025-02-15T17:06:28.993+0000] {spark_submit.py:641} INFO - ---------------- MENAMPILKAN BANYAK DATA DUPLIKAT BERDASARKAN EMPLOYEE_ID ----------------
+[2025-02-15T17:06:29.764+0000] {spark_submit.py:641} INFO - +-----------+------+
+[2025-02-15T17:06:29.766+0000] {spark_submit.py:641} INFO - |employee_id|jumlah|
+[2025-02-15T17:06:29.768+0000] {spark_submit.py:641} INFO - +-----------+------+
+[2025-02-15T17:06:29.769+0000] {spark_submit.py:641} INFO - |      64573|     2|
+[2025-02-15T17:06:29.771+0000] {spark_submit.py:641} INFO - |      49584|     3|
+[2025-02-15T17:06:29.773+0000] {spark_submit.py:641} INFO - +-----------+------+
+[2025-02-15T17:06:29.775+0000] {spark_submit.py:641} INFO - 
+[2025-02-15T17:06:29.776+0000] {spark_submit.py:641} INFO - ---------------- MENAMPILKAN SEMUA BARIS DAN KOLOM DARI EMPLOYEE ID YANG DUPLIKAT ----------------
+[2025-02-15T17:06:30.182+0000] {spark_submit.py:641} INFO - +-----------+----------+--------+---------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-15T17:06:30.184+0000] {spark_submit.py:641} INFO - |employee_id|department|  region|education|gender|recruitment_channel|no_of_trainings|age|previous_year_rating|length_of_service|KPIs_met_more_than_80|awards_won|avg_training_score|
+[2025-02-15T17:06:30.186+0000] {spark_submit.py:641} INFO - +-----------+----------+--------+---------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-15T17:06:30.188+0000] {spark_submit.py:641} INFO - |      49584|        HR|region_7|Bachelors|     m|              other|              1| 33|                   1|                9|                    0|         0|                51|
+[2025-02-15T17:06:30.190+0000] {spark_submit.py:641} INFO - |      49584|        HR|region_7|Bachelors|     m|              other|              1| 33|                   1|                9|                    0|         0|                51|
+[2025-02-15T17:06:30.191+0000] {spark_submit.py:641} INFO - |      49584|        HR|region_7|Bachelors|     m|              other|              1| 33|                   1|                9|                    0|         0|                51|
+[2025-02-15T17:06:30.192+0000] {spark_submit.py:641} INFO - |      64573|Technology|region_7|Bachelors|     f|           referred|              2| 30|                   5|                6|                    1|         0|                81|
+[2025-02-15T17:06:30.194+0000] {spark_submit.py:641} INFO - |      64573|        HR|region_7|Bachelors|     f|           referred|              1| 35|                   5|                4|                    1|         0|                81|
+[2025-02-15T17:06:30.195+0000] {spark_submit.py:641} INFO - +-----------+----------+--------+---------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-15T17:06:30.196+0000] {spark_submit.py:641} INFO - 
+[2025-02-15T17:06:30.197+0000] {spark_submit.py:641} INFO - ---------------- MENAMPILKAN SEMUA BARIS DAN KOLOM DARI EMPLOYEE ID YANG SUDAH DIHANDLE DUPLIKASINYA ----------------
+[2025-02-15T17:06:30.733+0000] {spark_submit.py:641} INFO - +-----------+----------+--------+---------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-15T17:06:30.735+0000] {spark_submit.py:641} INFO - |employee_id|department|  region|education|gender|recruitment_channel|no_of_trainings|age|previous_year_rating|length_of_service|KPIs_met_more_than_80|awards_won|avg_training_score|
+[2025-02-15T17:06:30.737+0000] {spark_submit.py:641} INFO - +-----------+----------+--------+---------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-15T17:06:30.739+0000] {spark_submit.py:641} INFO - |      49584|        HR|region_7|Bachelors|     m|              other|              1| 33|                   1|                9|                    0|         0|                51|
+[2025-02-15T17:06:30.740+0000] {spark_submit.py:641} INFO - |      64573|        HR|region_7|Bachelors|     f|           referred|              1| 35|                   5|                4|                    1|         0|                81|
+[2025-02-15T17:06:30.742+0000] {spark_submit.py:641} INFO - |      64573|Technology|region_7|Bachelors|     f|           referred|              2| 30|                   5|                6|                    1|         0|                81|
+[2025-02-15T17:06:30.744+0000] {spark_submit.py:641} INFO - +-----------+----------+--------+---------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-15T17:06:30.746+0000] {spark_submit.py:641} INFO - 
+[2025-02-15T17:06:31.630+0000] {spark_submit.py:641} INFO - ---------------- MENAMPILKAN DATA HASIL LOAD KE POSTGRES ----------------
+[2025-02-15T17:06:31.754+0000] {spark_submit.py:641} INFO - +-----------+----------+--------+---------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-15T17:06:31.760+0000] {spark_submit.py:641} INFO - |employee_id|department|  region|education|gender|recruitment_channel|no_of_trainings|age|previous_year_rating|length_of_service|KPIs_met_more_than_80|awards_won|avg_training_score|
+[2025-02-15T17:06:31.762+0000] {spark_submit.py:641} INFO - +-----------+----------+--------+---------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-15T17:06:31.763+0000] {spark_submit.py:641} INFO - |      49584|        HR|region_7|Bachelors|     m|              other|              1| 33|                   1|                9|                    0|         0|                51|
+[2025-02-15T17:06:31.765+0000] {spark_submit.py:641} INFO - |      64573|        HR|region_7|Bachelors|     f|           referred|              1| 35|                   5|                4|                    1|         0|                81|
+[2025-02-15T17:06:31.766+0000] {spark_submit.py:641} INFO - |      64573|Technology|region_7|Bachelors|     f|           referred|              2| 30|                   5|                6|                    1|         0|                81|
+[2025-02-15T17:06:31.767+0000] {spark_submit.py:641} INFO - +-----------+----------+--------+---------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-15T17:06:31.768+0000] {spark_submit.py:641} INFO - 
+[2025-02-15T17:06:31.710+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-15T17:06:31.714+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=***_elt_dag, task_id=etl_task, run_id=manual__2025-02-15T16:42:48.589872+00:00, execution_date=20250215T164248, start_date=20250215T170619, end_date=20250215T170631
+[2025-02-15T17:06:31.775+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-15T17:06:31.795+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-15T17:06:31.801+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

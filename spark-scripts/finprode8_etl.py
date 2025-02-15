@@ -1,6 +1,7 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 import pyspark.sql.functions as F
+from pyspark.sql.functions import count, asc
 import os
 import pyspark
 from dotenv import load_dotenv
@@ -34,7 +35,7 @@ spark = pyspark.sql.SparkSession(sparkcontext.getOrCreate())
 #-----EXTRACT-----#
 
 #Membaca file dataset
-df = spark.read.csv("/spark-scripts/Uncleaned_employees_final_dataset.csv", header = True)
+df = spark.read.csv("/data/Uncleaned_employees_final_dataset.csv", header = True)
 print("---------------- MENAMPILKAN DATASET ----------------")
 df.show(10)
 
@@ -86,9 +87,19 @@ df = df.withColumn("previous_year_rating", F.coalesce(df["previous_year_rating"]
 df.select((F.count(F.when(F.col("education").isNull(), 1)).alias("education_null")), \
           (F.count(F.when(F.col("previous_year_rating").isNull(), 1)).alias("previous_year_rating_null"))).show()
 
+#Mengecek data duplikat
+print("---------------- MENAMPILKAN BANYAK DATA DUPLIKAT BERDASARKAN EMPLOYEE_ID ----------------")
+df.groupBy("employee_id").agg(count("*").alias("jumlah")).filter("jumlah > 1").show()
 
+print("---------------- MENAMPILKAN SEMUA BARIS DAN KOLOM DARI EMPLOYEE ID YANG DUPLIKAT ----------------")
+df.where(df.employee_id.isin(['64573', '49584'])).orderBy(asc('employee_id')).show()
 
-#df_filtered_ed = df.select("education").distinct().show()
+#Karena kolom unik dari data duplikasi ditampilkan adalah berasal dari kolom 
+# employee_id dan departemen, maka penghapusan data duplikasi harus berdasarkan kedua kolom tersebut
+df_cleaned = df.dropDuplicates(['employee_id', 'department'])
+
+print("---------------- MENAMPILKAN HASIL DARI DATA DUPLIKASI YANG TELAH DIHANDLE BERDASARKAN KOLOM EMPLOYEE_ID DAN DEPARTMENT ----------------")
+df_cleaned.where(df_cleaned.employee_id.isin(['64573', '49584'])).orderBy(asc('employee_id')).show()
 
 #-----TRANSFORM-----#
 
@@ -111,17 +122,18 @@ postgres_properties = {
 }
 
 # Menyimpan DataFrame ke PostgreSQL
-df.write \
-    .jdbc(url=postgres_url, \
-         table="employees", \
-         mode="overwrite", \
-         properties=postgres_properties)
+df_cleaned.write \
+        .jdbc(url=postgres_url, \
+            table="employees", \
+            mode="overwrite", \
+            properties=postgres_properties)
 
 #query = "(SELECT * FROM employees WHERE education = 'unknown') as temp"
 df_postgres = spark.read.jdbc(url=postgres_url, \
                               table="employees", \
                               properties=postgres_properties)
-print("---------------- MENAMPILKAN DATA HASIL LOAD KE POSTGRES ----------------")
+
+print("---------------- MENAMPILKAN DATA HASIL TRANSFORMASI YANG SUDAH DILOAD KE POSTGRES ----------------")
 df_postgres.show()
 
 #-----LOAD TO POSTGRES-----#

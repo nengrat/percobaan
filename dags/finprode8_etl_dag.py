@@ -9,7 +9,7 @@ default_args = {
 }
 
 spark_dag = DAG(
-    dag_id="finprode8_elt_dag",
+    dag_id="finprode8_etl_dag",
     default_args=default_args,
     schedule_interval=None,
     description="Test for spark submit",

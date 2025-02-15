@@ -23,9 +23,9 @@ services:
         environment:
             - DW_POSTGRES_USER=${POSTGRES_USER}
             - DW_POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-            - DW_POSTGRES_DB=warehouse
+            - DW_POSTGRES_DB=${POSTGRES_DB}
             - DW_POSTGRES_CONTAINER_NAME=${POSTGRES_CONTAINER_NAME}
-            - DW_POSTGRES_PORT=5432
+            - DW_POSTGRES_PORT=5433
             - MB_USER_EMAIL=${METABASE_USER_EMAIL}
             - MB_USER_PASSWORD=${METABASE_USER_PASSWORD}
             - MB_USER_FIRST_NAME=${METABASE_USER_FIRST_NAME}
