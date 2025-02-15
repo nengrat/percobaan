@@ -1,6 +1,6 @@
 services:
     metabase:
-        image: finprode8-metabase
+        image: metabase/metabase:v0.47.3
         container_name: ${METABASE_CONTAINER_NAME}
         ports:
             - "${METABASE_PORT}:3000"
@@ -14,7 +14,7 @@ services:
         restart: always
 
     metabase-setup:
-        image: finprode8-bash
+        image: bash:5.1.16
         container_name: finprode8-metabase-setup
         volumes:
             - ../scripts:/tmp
