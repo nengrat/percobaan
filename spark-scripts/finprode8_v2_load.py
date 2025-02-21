@@ -12,24 +12,11 @@ load_dotenv(dotenv_path=dotenv_path)
 
 
 def load():
-    """
-    sparkcontext = pyspark.SparkContext.getOrCreate(conf=(
-            pyspark
-            .SparkConf()
-            .setAppName('finprode8_transform')
-            .setMaster('local')
-            .set("spark.jars", "/spark-scripts/jars/postgresql-42.2.18.jar")
-        ))
-    sparkcontext.setLogLevel("WARN")
-
-    spark = pyspark.sql.SparkSession(sparkcontext.getOrCreate())
-    """
+    
     spark = SparkSession.builder \
         .appName("finprode8_load") \
         .master("local").getOrCreate()
-        #.config("spark.jars", "/spark-scripts/jars/postgresql-42.2.18.jar") \
-        #.getOrCreate()
-
+   
     spark.sparkContext.setLogLevel("WARN")
 
     df = spark.read.parquet("data/transformed.parquet")
@@ -57,7 +44,6 @@ def load():
                 mode="overwrite", \
                 properties=postgres_properties)
 
-    #query = "(SELECT * FROM employees WHERE education = 'unknown') as temp"
     df_postgres = spark.read.jdbc(url=postgres_url, \
                                 table="employees_v2", \
                                 properties=postgres_properties)

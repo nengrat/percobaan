@@ -16,43 +16,13 @@ load_dotenv(dotenv_path=dotenv_path)
 
 def transform():
 
-    """
-    sparkcontext = pyspark.SparkContext.getOrCreate(conf=(
-            pyspark
-            .SparkConf()
-            .setAppName('finprode8_transform')
-            .setMaster('local')
-            .set("spark.jars", "/spark-scripts/jars/postgresql-42.2.18.jar")
-        ))
-    sparkcontext.setLogLevel("WARN")
-
-    spark = pyspark.sql.SparkSession(sparkcontext.getOrCreate())
-    """
     spark = SparkSession.builder \
         .appName("finprode8_transform") \
         .master("local").getOrCreate()
-        #.config("spark.jars", "/spark-scripts/jars/postgresql-42.2.18.jar") \
-        #.getOrCreate()
 
     spark.sparkContext.setLogLevel("WARN")
 
     df = spark.read.parquet("data/extracted.parquet")
-    """
-    print("---------------- MENAMPILKAN TIPE DATA SEBELUM TRANSFORMASI TRANSFORMASI ----------------")
-    df.printSchema()
-    
-    #Mengubah tipe data beberapa kolom menjadi integer
-    df = df.withColumn("no_of_trainings", F.col("no_of_trainings").cast("integer")) \
-        .withColumn("age", F.col("age").cast("integer")) \
-        .withColumn("previous_year_rating", F.col("previous_year_rating").cast("integer")) \
-        .withColumn("length_of_service", F.col("length_of_service").cast("integer")) \
-        .withColumn("KPIs_met_more_than_80", F.col("KPIs_met_more_than_80").cast("integer")) \
-        .withColumn("awards_won", F.col("awards_won").cast("integer")) \
-        .withColumn("avg_training_score", F.col("avg_training_score").cast("integer"))
-    #Menampilkan tipe data schema yang telah diubah
-    print("---------------- MENAMPILKAN TIPE DATA HASIL TRANSFORMASI ----------------")
-    df.printSchema()
-    """
     
     #Mengecek data NULL
     print("---------------- MENAMPILKAN BANYAK DATA NULL DI SETIAP KOLOM ----------------")

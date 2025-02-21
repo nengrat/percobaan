@@ -10,28 +10,13 @@ load_dotenv(dotenv_path=dotenv_path)
 
 
 def extract():
-    #dotenv_path = Path('/resources/.env')
-    #load_dotenv(dotenv_path=dotenv_path)
 
     spark = SparkSession.builder \
         .appName("finprode8_extract") \
         .master("local").getOrCreate()
-        #.config("spark.jars", "/spark-scripts/jars/postgresql-42.2.18.jar") \
-        #.getOrCreate()
 
     spark.sparkContext.setLogLevel("WARN")
-    """
-    sparkcontext = pyspark.SparkContext.getOrCreate(conf=(
-            pyspark
-            .SparkConf()
-            .setAppName('finprode8_extract')
-            .setMaster('local')
-            .set("spark.jars", "/spark-scripts/jars/postgresql-42.2.18.jar")
-        ))
-    sparkcontext.setLogLevel("WARN")
-
-    spark = pyspark.sql.SparkSession(sparkcontext.getOrCreate())
-    """
+   
     # Download latest version
     path = kagglehub.dataset_download("sanjanchaudhari/employees-performance-for-hr-analytics")
 

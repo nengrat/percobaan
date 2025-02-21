@@ -26239,3 +26239,41 @@ File Path                                  PID    Runtime      # DAGs    # Error
 /opt/airflow/dags/finprode8_v2_etl_dag.py                           1           0  0.14s           2025-02-21T11:37:29                      10
 ================================================================================
 [2025-02-21T11:37:58.196+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-02-21T11:43:30.609+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2025-02-21T11:43:30.614+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-02-21T11:43:30.615+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-02-21T11:43:30.616+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-02-21T11:43:30.677+0000] {manager.py:824} INFO - There are 1 files in /opt/airflow/dags
+[2025-02-21T11:43:30.771+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+-----------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/finprode8_v2_etl_dag.py    167  0.03s             0           0                                                   0
+================================================================================
+[2025-02-21T11:44:02.730+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/finprode8_v2_etl_dag.py                           1           0  0.18s           2025-02-21T11:44:01                      10
+================================================================================
+[2025-02-21T11:44:34.578+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/finprode8_v2_etl_dag.py                           1           0  0.16s           2025-02-21T11:44:32                      10
+================================================================================
+[2025-02-21T11:45:06.467+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/finprode8_v2_etl_dag.py                           1           0  0.25s           2025-02-21T11:45:03                      10
+================================================================================
+[2025-02-21T11:45:36.055+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
