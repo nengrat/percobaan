@@ -26,21 +26,8 @@ def transform():
     
     #Mengecek data NULL
     print("---------------- MENAMPILKAN BANYAK DATA NULL DI SETIAP KOLOM ----------------")
+    df.select([sum(col(c).isNull().cast("int")).alias((c) + "_null") for c in df.columns]).show()
     
-    df.select((F.count(F.when(F.col("employee_id").isNull(), 1)).alias("employee_id_null")), \
-            (F.count(F.when(F.col("department").isNull(), 1)).alias("department_null")), \
-            (F.count(F.when(F.col("region").isNull(), 1)).alias("region_null")), \
-            (F.count(F.when(F.col("education").isNull(), 1)).alias("education_null")), \
-            (F.count(F.when(F.col("gender").isNull(), 1)).alias("gender_null")),\
-            (F.count(F.when(F.col("recruitment_channel").isNull(), 1)).alias("recruitment_channel_null")),\
-            (F.count(F.when(F.col("no_of_trainings").isNull(), 1)).alias("no_of_trainings_null")),\
-            (F.count(F.when(F.col("age").isNull(), 1)).alias("age_null")),\
-            (F.count(F.when(F.col("previous_year_rating").isNull(), 1)).alias("previous_year_rating_null")),\
-            (F.count(F.when(F.col("length_of_service").isNull(), 1)).alias("length_of_service_null")),\
-            (F.count(F.when(F.col("KPIs_met_more_than_80").isNull(), 1)).alias("KPIs_met_more_than_80_null")),\
-            (F.count(F.when(F.col("awards_won").isNull(), 1)).alias("awards_won_null")),\
-            (F.count(F.when(F.col("avg_training_score").isNull(), 1)).alias("avg_training_score_nuli"))).show()
-
     #NULL handling pada kolom education dan previous_year_rating
     print("---------------- NULL HANDLING PADA KOLOM EDUCATION & PREVIOUS_YEAR_RATING ----------------")
     df = df.withColumn("education", F.coalesce(df["education"], F.lit('unknown'))) #mengubah data null jadi unknown
