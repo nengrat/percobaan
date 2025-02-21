@@ -40,12 +40,12 @@ def load():
     # Menyimpan DataFrame ke PostgreSQL
     df.write \
             .jdbc(url=postgres_url, \
-                table="employees_v2", \
+                table="employees", \
                 mode="overwrite", \
                 properties=postgres_properties)
 
     df_postgres = spark.read.jdbc(url=postgres_url, \
-                                table="employees_v2", \
+                                table="employees", \
                                 properties=postgres_properties)
 
     print("---------------- MENAMPILKAN DATA HASIL LOAD KE POSTGRES ----------------")
