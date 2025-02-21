@@ -9,6 +9,7 @@ RUN pip install \
     lxml \
     requests \
     pandas \
-    python-dotenv==0.20.0 
+    python-dotenv==0.20.0 \
+    kagglehub
   
 COPY ./.env /opt/app/.env

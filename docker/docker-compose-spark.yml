@@ -34,6 +34,7 @@ services:
             - ../spark-scripts:/spark-scripts
             - ../scripts:/scripts
             - ../logs:/tmp
+            - ../data:/data
         depends_on:
             - finprode8-ratih-spark-master
 

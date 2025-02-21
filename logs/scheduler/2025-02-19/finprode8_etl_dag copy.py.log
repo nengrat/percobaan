@@ -1,0 +1,14 @@
+[2025-02-19T14:05:43.005+0000] {processor.py:186} INFO - Started process (PID=167) to work on /opt/airflow/dags/finprode8_etl_dag copy.py
+[2025-02-19T14:05:43.010+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_etl_dag copy.py for tasks to queue
+[2025-02-19T14:05:43.018+0000] {logging_mixin.py:190} INFO - [2025-02-19T14:05:43.017+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_etl_dag copy.py
+[2025-02-19T14:05:43.082+0000] {processor.py:925} INFO - DAG(s) 'finprode8_etl_dag' retrieved from /opt/airflow/dags/finprode8_etl_dag copy.py
+[2025-02-19T14:05:43.621+0000] {logging_mixin.py:190} INFO - [2025-02-19T14:05:43.621+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-19T14:05:43.644+0000] {logging_mixin.py:190} INFO - [2025-02-19T14:05:43.644+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_etl_dag to None, run_after=None
+[2025-02-19T14:05:43.679+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_etl_dag copy.py took 0.702 seconds
+[2025-02-19T14:06:14.198+0000] {processor.py:186} INFO - Started process (PID=177) to work on /opt/airflow/dags/finprode8_etl_dag copy.py
+[2025-02-19T14:06:14.199+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_etl_dag copy.py for tasks to queue
+[2025-02-19T14:06:14.202+0000] {logging_mixin.py:190} INFO - [2025-02-19T14:06:14.201+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_etl_dag copy.py
+[2025-02-19T14:06:14.238+0000] {processor.py:925} INFO - DAG(s) 'finprode8_etl_dag' retrieved from /opt/airflow/dags/finprode8_etl_dag copy.py
+[2025-02-19T14:06:14.299+0000] {logging_mixin.py:190} INFO - [2025-02-19T14:06:14.299+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-19T14:06:14.324+0000] {logging_mixin.py:190} INFO - [2025-02-19T14:06:14.323+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_etl_dag to None, run_after=None
+[2025-02-19T14:06:14.344+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_etl_dag copy.py took 0.155 seconds
