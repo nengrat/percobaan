@@ -32,7 +32,7 @@ transform_task = SparkSubmitOperator(
     application="/spark-scripts/finprode8_v2_transform.py",
     conn_id="spark_main",
     task_id="transform_task",
-    packages="org.postgresql:postgresql:42.2.18",
+    #packages="org.postgresql:postgresql:42.2.18",
     dag=spark_dag,
 )
 

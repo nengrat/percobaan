@@ -30,9 +30,9 @@ def transform():
     """
     spark = SparkSession.builder \
         .appName("finprode8_transform") \
-        .master("local") \
-        .config("spark.jars", "/spark-scripts/jars/postgresql-42.2.18.jar") \
-        .getOrCreate()
+        .master("local").getOrCreate()
+        #.config("spark.jars", "/spark-scripts/jars/postgresql-42.2.18.jar") \
+        #.getOrCreate()
 
     spark.sparkContext.setLogLevel("WARN")
 
@@ -87,15 +87,17 @@ def transform():
     print("---------------- MENAMPILKAN SEMUA BARIS DAN KOLOM DARI EMPLOYEE ID YANG DUPLIKAT ----------------")
     df.where(df.employee_id.isin(['64573', '49584'])).orderBy(asc('employee_id')).show()
 
-    #Karena kolom unik dari data duplikasi ditampilkan adalah berasal dari kolom 
-    # employee_id dan departemen, maka penghapusan data duplikasi harus berdasarkan kedua kolom tersebut
+    """
+    Karena kolom unik dari data duplikasi ditampilkan adalah berasal dari kolom 
+    employee_id dan departement, maka penghapusan data duplikasi harus berdasarkan kedua kolom tersebut
+    """
     df_cleaned = df.dropDuplicates(['employee_id', 'department'])
 
     print("---------------- MENAMPILKAN HASIL DARI DATA DUPLIKASI YANG TELAH DIHANDLE BERDASARKAN KOLOM EMPLOYEE_ID DAN DEPARTMENT ----------------")
     df_cleaned.where(df_cleaned.employee_id.isin(['64573', '49584'])).orderBy(asc('employee_id')).show()
         
         
-    # Simpan sebagai Parquet untuk langkah berikutnya
+    # Simpan sebagai Parquet
     df_cleaned.write.mode("overwrite").parquet("data/transformed.parquet")
     
     print("---------------- MENAMPILKAN DATA HASIL TRASNFORMASI ----------------")

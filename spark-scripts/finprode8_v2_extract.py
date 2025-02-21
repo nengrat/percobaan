@@ -15,9 +15,9 @@ def extract():
 
     spark = SparkSession.builder \
         .appName("finprode8_extract") \
-        .master("local") \
-        .config("spark.jars", "/spark-scripts/jars/postgresql-42.2.18.jar") \
-        .getOrCreate()
+        .master("local").getOrCreate()
+        #.config("spark.jars", "/spark-scripts/jars/postgresql-42.2.18.jar") \
+        #.getOrCreate()
 
     spark.sparkContext.setLogLevel("WARN")
     """
@@ -44,7 +44,7 @@ def extract():
     # Baca file CSV pertama yang ditemukan dengan Spark
     df = spark.read.csv(csv_files[0], header=True, inferSchema=True)
     
-    # Simpan sebagai Parquet untuk langkah berikutnya
+    # Simpan sebagai Parquet
     df.write.mode("overwrite").parquet("data/extracted.parquet")
     print("---------------- MENAMPILKAN DATA HASIL EXTRACT ----------------")
     df.show(5)

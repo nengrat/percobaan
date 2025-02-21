@@ -26,9 +26,9 @@ def load():
     """
     spark = SparkSession.builder \
         .appName("finprode8_load") \
-        .master("local") \
-        .config("spark.jars", "/spark-scripts/jars/postgresql-42.2.18.jar") \
-        .getOrCreate()
+        .master("local").getOrCreate()
+        #.config("spark.jars", "/spark-scripts/jars/postgresql-42.2.18.jar") \
+        #.getOrCreate()
 
     spark.sparkContext.setLogLevel("WARN")
 
