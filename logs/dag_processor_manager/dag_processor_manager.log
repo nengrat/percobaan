@@ -25968,3 +25968,40 @@ File Path                                  PID    Runtime      # DAGs    # Error
 ================================================================================
 [2025-02-21T10:51:57.061+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
 [2025-02-21T10:51:57.094+0000] {manager.py:824} INFO - There are 2 files in /opt/airflow/dags
+[2025-02-21T10:52:25.757+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/finprode8_v2_etl_dag.py                           1           0  0.22s           2025-02-21T10:52:04                      10
+/opt/airflow/dags/finprode8_etl_dag.py                              1           0  0.19s           2025-02-21T10:52:04                      10
+================================================================================
+[2025-02-21T10:52:57.529+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/finprode8_v2_etl_dag.py                           1           0  0.19s           2025-02-21T10:52:35                      10
+/opt/airflow/dags/finprode8_etl_dag.py                              1           0  0.15s           2025-02-21T10:52:35                      10
+================================================================================
+[2025-02-21T10:53:29.304+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/finprode8_v2_etl_dag.py                           1           0  0.17s           2025-02-21T10:53:07                      10
+/opt/airflow/dags/finprode8_etl_dag.py                              1           0  0.14s           2025-02-21T10:53:07                      10
+================================================================================
+[2025-02-21T10:54:00.939+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/finprode8_v2_etl_dag.py                           1           0  0.16s           2025-02-21T10:53:37                      10
+/opt/airflow/dags/finprode8_etl_dag.py                              1           0  0.15s           2025-02-21T10:53:37                      10
+================================================================================
+[2025-02-21T10:54:11.247+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
