@@ -1,13 +1,12 @@
 from pyspark.sql import SparkSession
-import kagglehub
 import os
-import pyspark
 from dotenv import load_dotenv
 from pathlib import Path
 from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 import pyspark.sql.functions as F
 from pyspark.sql.functions import count, asc, col, sum
+
 
 
 dotenv_path = Path('/resources/.env')
@@ -64,6 +63,9 @@ def transform():
     print(os.listdir("data/transformed.parquet"))
     
     print("Transform data berhasil.")
+
+
+
     spark.stop()
 
 if __name__ == "__main__":

@@ -1,7 +1,6 @@
 from pyspark.sql import SparkSession
 import kagglehub
 import os
-import pyspark
 from dotenv import load_dotenv
 from pathlib import Path
 

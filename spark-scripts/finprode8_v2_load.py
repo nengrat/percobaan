@@ -1,6 +1,5 @@
 from pyspark.sql import SparkSession
 import os
-import pyspark
 from dotenv import load_dotenv
 from pathlib import Path
 from pyspark.sql.types import *
@@ -20,8 +19,7 @@ def load():
     spark.sparkContext.setLogLevel("WARN")
 
     df = spark.read.parquet("data/transformed.parquet")
-
-
+   
     # Konfigurasi koneksi PostgreSQL
     postgres_host = os.getenv('POSTGRES_CONTAINER_NAME')
     postgres_dw_db = os.getenv('POSTGRES_DW_DB')
@@ -50,7 +48,8 @@ def load():
 
     print("---------------- MENAMPILKAN DATA HASIL LOAD KE POSTGRES ----------------")
     df_postgres.show()
-        
+
+         
     
     print("Jumlah baris dalam DataFrame:", df_postgres.count())
        

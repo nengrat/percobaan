@@ -1,0 +1,83 @@
+[2025-02-21T19:26:27.872+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-21T19:26:27.953+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: finprode8_v2_etl_dag.extract_task manual__2025-02-21T19:26:24.041939+00:00 [queued]>
+[2025-02-21T19:26:27.975+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: finprode8_v2_etl_dag.extract_task manual__2025-02-21T19:26:24.041939+00:00 [queued]>
+[2025-02-21T19:26:27.978+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-02-21T19:26:28.025+0000] {taskinstance.py:2890} INFO - Executing <Task(SparkSubmitOperator): extract_task> on 2025-02-21 19:26:24.041939+00:00
+[2025-02-21T19:26:28.035+0000] {standard_task_runner.py:72} INFO - Started process 1451 to run task
+[2025-02-21T19:26:28.124+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', '***_v2_etl_dag', 'extract_task', 'manual__2025-02-21T19:26:24.041939+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/***_v2_etl_dag.py', '--cfg-path', '/tmp/tmp4mu0ny0k']
+[2025-02-21T19:26:28.199+0000] {standard_task_runner.py:105} INFO - Job 49: Subtask extract_task
+[2025-02-21T19:26:28.336+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-02-21T19:26:28.515+0000] {task_command.py:467} INFO - Running <TaskInstance: finprode8_v2_etl_dag.extract_task manual__2025-02-21T19:26:24.041939+00:00 [running]> on host ***-airflow-scheduler
+[2025-02-21T19:26:28.859+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ratih malini' AIRFLOW_CTX_DAG_ID='***_v2_etl_dag' AIRFLOW_CTX_TASK_ID='extract_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-21T19:26:24.041939+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-21T19:26:24.041939+00:00'
+[2025-02-21T19:26:28.863+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-02-21T19:26:28.991+0000] {base.py:84} INFO - Retrieving connection 'spark_main'
+[2025-02-21T19:26:28.996+0000] {spark_submit.py:474} INFO - Spark-Submit cmd: spark-submit --master spark://***-spark-master:7077 --name arrow-spark /spark-scripts/***_v2_extract.py
+[2025-02-21T19:26:38.718+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:38 INFO SparkContext: Running Spark version 3.3.2
+[2025-02-21T19:26:38.956+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:38 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-02-21T19:26:39.504+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:39 INFO ResourceUtils: ==============================================================
+[2025-02-21T19:26:39.507+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:39 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2025-02-21T19:26:39.508+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:39 INFO ResourceUtils: ==============================================================
+[2025-02-21T19:26:39.510+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:39 INFO SparkContext: Submitted application: ***_extract
+[2025-02-21T19:26:39.541+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:39 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2025-02-21T19:26:39.550+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:39 INFO ResourceProfile: Limiting resource is cpu
+[2025-02-21T19:26:39.552+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:39 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2025-02-21T19:26:39.877+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:39 INFO SecurityManager: Changing view acls to: airflow
+[2025-02-21T19:26:39.878+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:39 INFO SecurityManager: Changing modify acls to: airflow
+[2025-02-21T19:26:39.881+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:39 INFO SecurityManager: Changing view acls groups to:
+[2025-02-21T19:26:39.884+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:39 INFO SecurityManager: Changing modify acls groups to:
+[2025-02-21T19:26:39.887+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:39 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(airflow); groups with view permissions: Set(); users  with modify permissions: Set(airflow); groups with modify permissions: Set()
+[2025-02-21T19:26:40.894+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:40 INFO Utils: Successfully started service 'sparkDriver' on port 45573.
+[2025-02-21T19:26:41.049+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:41 INFO SparkEnv: Registering MapOutputTracker
+[2025-02-21T19:26:41.226+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:41 INFO SparkEnv: Registering BlockManagerMaster
+[2025-02-21T19:26:41.284+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:41 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2025-02-21T19:26:41.285+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:41 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2025-02-21T19:26:41.294+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:41 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2025-02-21T19:26:41.352+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:41 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-641c7dfb-c46c-41c2-a890-16113e1261d1
+[2025-02-21T19:26:41.883+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:41 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2025-02-21T19:26:41.959+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:41 INFO SparkEnv: Registering OutputCommitCoordinator
+[2025-02-21T19:26:42.515+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:42 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2025-02-21T19:26:42.734+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:42 INFO Executor: Starting executor ID driver on host ***-airflow-scheduler
+[2025-02-21T19:26:42.756+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:42 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2025-02-21T19:26:42.814+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:42 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43377.
+[2025-02-21T19:26:42.816+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:42 INFO NettyBlockTransferService: Server created on ***-airflow-scheduler:43377
+[2025-02-21T19:26:42.818+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:42 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2025-02-21T19:26:42.831+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:42 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ***-airflow-scheduler, 43377, None)
+[2025-02-21T19:26:42.838+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:42 INFO BlockManagerMasterEndpoint: Registering block manager ***-airflow-scheduler:43377 with 434.4 MiB RAM, BlockManagerId(driver, ***-airflow-scheduler, 43377, None)
+[2025-02-21T19:26:42.844+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:42 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ***-airflow-scheduler, 43377, None)
+[2025-02-21T19:26:42.847+0000] {spark_submit.py:641} INFO - 25/02/21 19:26:42 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ***-airflow-scheduler, 43377, None)
+[2025-02-21T19:26:55.448+0000] {spark_submit.py:641} INFO - ---------------- MENAMPILKAN DATA HASIL EXTRACT ----------------
+[2025-02-21T19:26:55.684+0000] {spark_submit.py:641} INFO - +-----------+-----------------+---------+---------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-21T19:26:55.686+0000] {spark_submit.py:641} INFO - |employee_id|       department|   region|education|gender|recruitment_channel|no_of_trainings|age|previous_year_rating|length_of_service|KPIs_met_more_than_80|awards_won|avg_training_score|
+[2025-02-21T19:26:55.688+0000] {spark_submit.py:641} INFO - +-----------+-----------------+---------+---------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-21T19:26:55.689+0000] {spark_submit.py:641} INFO - |       8724|       Technology|region_26|Bachelors|     m|           sourcing|              1| 24|                null|                1|                    1|         0|                77|
+[2025-02-21T19:26:55.691+0000] {spark_submit.py:641} INFO - |      74430|               HR| region_4|Bachelors|     f|              other|              1| 31|                   3|                5|                    0|         0|                51|
+[2025-02-21T19:26:55.692+0000] {spark_submit.py:641} INFO - |      72255|Sales & Marketing|region_13|Bachelors|     m|              other|              1| 31|                   1|                4|                    0|         0|                47|
+[2025-02-21T19:26:55.693+0000] {spark_submit.py:641} INFO - |      38562|      Procurement| region_2|Bachelors|     f|              other|              3| 31|                   2|                9|                    0|         0|                65|
+[2025-02-21T19:26:55.694+0000] {spark_submit.py:641} INFO - |      64486|          Finance|region_29|Bachelors|     m|           sourcing|              1| 30|                   4|                7|                    0|         0|                61|
+[2025-02-21T19:26:55.695+0000] {spark_submit.py:641} INFO - +-----------+-----------------+---------+---------+------+-------------------+---------------+---+--------------------+-----------------+---------------------+----------+------------------+
+[2025-02-21T19:26:55.696+0000] {spark_submit.py:641} INFO - only showing top 5 rows
+[2025-02-21T19:26:55.697+0000] {spark_submit.py:641} INFO - 
+[2025-02-21T19:26:55.698+0000] {spark_submit.py:641} INFO - root
+[2025-02-21T19:26:55.699+0000] {spark_submit.py:641} INFO - |-- employee_id: integer (nullable = true)
+[2025-02-21T19:26:55.700+0000] {spark_submit.py:641} INFO - |-- department: string (nullable = true)
+[2025-02-21T19:26:55.701+0000] {spark_submit.py:641} INFO - |-- region: string (nullable = true)
+[2025-02-21T19:26:55.702+0000] {spark_submit.py:641} INFO - |-- education: string (nullable = true)
+[2025-02-21T19:26:55.703+0000] {spark_submit.py:641} INFO - |-- gender: string (nullable = true)
+[2025-02-21T19:26:55.704+0000] {spark_submit.py:641} INFO - |-- recruitment_channel: string (nullable = true)
+[2025-02-21T19:26:55.705+0000] {spark_submit.py:641} INFO - |-- no_of_trainings: integer (nullable = true)
+[2025-02-21T19:26:55.706+0000] {spark_submit.py:641} INFO - |-- age: integer (nullable = true)
+[2025-02-21T19:26:55.707+0000] {spark_submit.py:641} INFO - |-- previous_year_rating: integer (nullable = true)
+[2025-02-21T19:26:55.708+0000] {spark_submit.py:641} INFO - |-- length_of_service: integer (nullable = true)
+[2025-02-21T19:26:55.709+0000] {spark_submit.py:641} INFO - |-- KPIs_met_more_than_80: integer (nullable = true)
+[2025-02-21T19:26:55.710+0000] {spark_submit.py:641} INFO - |-- awards_won: integer (nullable = true)
+[2025-02-21T19:26:55.711+0000] {spark_submit.py:641} INFO - |-- avg_training_score: integer (nullable = true)
+[2025-02-21T19:26:55.712+0000] {spark_submit.py:641} INFO - 
+[2025-02-21T19:26:56.485+0000] {spark_submit.py:641} INFO - Jumlah baris dalam DataFrame : 17417
+[2025-02-21T19:26:56.486+0000] {spark_submit.py:641} INFO - Isi folder data/extracted.parquet :
+[2025-02-21T19:26:56.488+0000] {spark_submit.py:641} INFO - ['_SUCCESS', '.part-00000-dbd652a8-4895-4626-82f1-e5100580a96d-c000.snappy.parquet.crc', 'part-00000-dbd652a8-4895-4626-82f1-e5100580a96d-c000.snappy.parquet', '._SUCCESS.crc']
+[2025-02-21T19:26:56.489+0000] {spark_submit.py:641} INFO - Extract data berhasil.
+[2025-02-21T19:26:57.156+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-02-21T19:26:57.158+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=***_v2_etl_dag, task_id=extract_task, run_id=manual__2025-02-21T19:26:24.041939+00:00, execution_date=20250221T192624, start_date=20250221T192627, end_date=20250221T192657
+[2025-02-21T19:26:57.207+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-21T19:26:57.249+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-21T19:26:57.252+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
