@@ -12,12 +12,14 @@ load_dotenv(dotenv_path=dotenv_path)
 
 def load():
     
+    # Inisialisasi SparkSession
     spark = SparkSession.builder \
         .appName("finprode8_load") \
         .master("local").getOrCreate()
    
     spark.sparkContext.setLogLevel("WARN")
 
+    # Membaca data hasil transform
     df = spark.read.parquet("data/transformed.parquet")
    
     # Konfigurasi koneksi PostgreSQL
@@ -26,6 +28,7 @@ def load():
     postgres_user = os.getenv('POSTGRES_USER')
     postgres_password = os.getenv('POSTGRES_PASSWORD')
 
+    # Menghubungkan Apache Spark ke PostgreSQL dengan JDBC
     postgres_url = f'jdbc:postgresql://{postgres_host}/{postgres_dw_db}'
     postgres_properties = {
         "user": postgres_user,
@@ -33,7 +36,6 @@ def load():
         "driver": "org.postgresql.Driver",
         'stringtype': 'unspecified'
     }
-
 
     # Menyimpan DataFrame ke PostgreSQL
     df.write \
@@ -44,16 +46,10 @@ def load():
 
     df_postgres = spark.read.jdbc(url=postgres_url, \
                                 table="employees", \
-                                properties=postgres_properties)
-
-    print("---------------- MENAMPILKAN DATA HASIL LOAD KE POSTGRES ----------------")
-    df_postgres.show()
-
-         
+                                properties=postgres_properties)     
     
     print("Jumlah baris dalam DataFrame:", df_postgres.count())
-       
-    print("Load data berhasil.")
+    print("Load data ke PostgreSQL berhasil.")
     spark.stop()
 
 if __name__ == "__main__":

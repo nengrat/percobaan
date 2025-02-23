@@ -1,0 +1,110 @@
+[2025-02-23T14:23:46.201+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-23T14:23:46.249+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: finprode8_v2_etl_dag.extract_task manual__2025-02-23T14:23:44.183950+00:00 [queued]>
+[2025-02-23T14:23:46.271+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: finprode8_v2_etl_dag.extract_task manual__2025-02-23T14:23:44.183950+00:00 [queued]>
+[2025-02-23T14:23:46.273+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-02-23T14:23:46.302+0000] {taskinstance.py:2890} INFO - Executing <Task(SparkSubmitOperator): extract_task> on 2025-02-23 14:23:44.183950+00:00
+[2025-02-23T14:23:46.318+0000] {standard_task_runner.py:72} INFO - Started process 391 to run task
+[2025-02-23T14:23:46.325+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', '***_v2_etl_dag', 'extract_task', 'manual__2025-02-23T14:23:44.183950+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/***_v2_etl_dag.py', '--cfg-path', '/tmp/tmpnvg47nr9']
+[2025-02-23T14:23:46.331+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask extract_task
+[2025-02-23T14:23:46.364+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-02-23T14:23:46.431+0000] {task_command.py:467} INFO - Running <TaskInstance: finprode8_v2_etl_dag.extract_task manual__2025-02-23T14:23:44.183950+00:00 [running]> on host ***-airflow-scheduler
+[2025-02-23T14:23:46.544+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ratih malini' AIRFLOW_CTX_DAG_ID='***_v2_etl_dag' AIRFLOW_CTX_TASK_ID='extract_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-23T14:23:44.183950+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-23T14:23:44.183950+00:00'
+[2025-02-23T14:23:46.547+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-02-23T14:23:46.600+0000] {base.py:84} INFO - Retrieving connection 'spark_main'
+[2025-02-23T14:23:46.603+0000] {spark_submit.py:474} INFO - Spark-Submit cmd: spark-submit --master spark://***-spark-master:7077 --name arrow-spark /spark-scripts/***_v2_extract.py
+[2025-02-23T14:23:49.438+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO SparkContext: Running Spark version 3.3.2
+[2025-02-23T14:23:49.497+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-02-23T14:23:49.599+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO ResourceUtils: ==============================================================
+[2025-02-23T14:23:49.601+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2025-02-23T14:23:49.603+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO ResourceUtils: ==============================================================
+[2025-02-23T14:23:49.605+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO SparkContext: Submitted application: ***_extract
+[2025-02-23T14:23:49.630+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2025-02-23T14:23:49.642+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO ResourceProfile: Limiting resource is cpu
+[2025-02-23T14:23:49.644+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2025-02-23T14:23:49.700+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO SecurityManager: Changing view acls to: airflow
+[2025-02-23T14:23:49.703+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO SecurityManager: Changing modify acls to: airflow
+[2025-02-23T14:23:49.705+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO SecurityManager: Changing view acls groups to:
+[2025-02-23T14:23:49.706+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO SecurityManager: Changing modify acls groups to:
+[2025-02-23T14:23:49.707+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(airflow); groups with view permissions: Set(); users  with modify permissions: Set(airflow); groups with modify permissions: Set()
+[2025-02-23T14:23:49.947+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO Utils: Successfully started service 'sparkDriver' on port 33553.
+[2025-02-23T14:23:49.978+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:49 INFO SparkEnv: Registering MapOutputTracker
+[2025-02-23T14:23:50.018+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO SparkEnv: Registering BlockManagerMaster
+[2025-02-23T14:23:50.036+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2025-02-23T14:23:50.038+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2025-02-23T14:23:50.043+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2025-02-23T14:23:50.065+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-0ec7e40b-b148-49b9-9f95-16c966fffcac
+[2025-02-23T14:23:50.082+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2025-02-23T14:23:50.102+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO SparkEnv: Registering OutputCommitCoordinator
+[2025-02-23T14:23:50.320+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2025-02-23T14:23:50.441+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO Executor: Starting executor ID driver on host ***-airflow-scheduler
+[2025-02-23T14:23:50.455+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2025-02-23T14:23:50.476+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41193.
+[2025-02-23T14:23:50.478+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO NettyBlockTransferService: Server created on ***-airflow-scheduler:41193
+[2025-02-23T14:23:50.480+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2025-02-23T14:23:50.487+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ***-airflow-scheduler, 41193, None)
+[2025-02-23T14:23:50.490+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO BlockManagerMasterEndpoint: Registering block manager ***-airflow-scheduler:41193 with 434.4 MiB RAM, BlockManagerId(driver, ***-airflow-scheduler, 41193, None)
+[2025-02-23T14:23:50.493+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ***-airflow-scheduler, 41193, None)
+[2025-02-23T14:23:50.495+0000] {spark_submit.py:641} INFO - 25/02/23 14:23:50 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ***-airflow-scheduler, 41193, None)
+[2025-02-23T14:24:01.389+0000] {spark_submit.py:641} INFO - Traceback (most recent call last):
+[2025-02-23T14:24:01.391+0000] {spark_submit.py:641} INFO - File "/spark-scripts/***_v2_extract.py", line 47, in <module>
+[2025-02-23T14:24:01.393+0000] {spark_submit.py:641} INFO - extract()
+[2025-02-23T14:24:01.395+0000] {spark_submit.py:641} INFO - File "/spark-scripts/***_v2_extract.py", line 33, in extract
+[2025-02-23T14:24:01.397+0000] {spark_submit.py:641} INFO - df1.write.mode("overwrite").parquet("/spark-scripts/extracted.parquet")
+[2025-02-23T14:24:01.400+0000] {spark_submit.py:641} INFO - NameError: name 'df1' is not defined
+[2025-02-23T14:24:01.615+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 177, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 567, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://***-spark-master:7077 --name arrow-spark /spark-scripts/***_v2_extract.py. Error code is: 1.
+[2025-02-23T14:24:01.622+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=***_v2_etl_dag, task_id=extract_task, run_id=manual__2025-02-23T14:23:44.183950+00:00, execution_date=20250223T142344, start_date=20250223T142346, end_date=20250223T142401
+[2025-02-23T14:24:01.660+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-02-23T14:24:01.663+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 4 for task extract_task (Cannot execute: spark-submit --master spark://***-spark-master:7077 --name arrow-spark /spark-scripts/***_v2_extract.py. Error code is: 1.; 391)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 177, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 567, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://***-spark-master:7077 --name arrow-spark /spark-scripts/***_v2_extract.py. Error code is: 1.
+[2025-02-23T14:24:01.681+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-23T14:24:01.717+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-23T14:24:01.723+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,176 @@
+[2025-02-23T14:45:30.174+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-23T14:45:30.197+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: finprode8_v2_etl_dag.extract_task manual__2025-02-23T14:45:27.857862+00:00 [queued]>
+[2025-02-23T14:45:30.213+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: finprode8_v2_etl_dag.extract_task manual__2025-02-23T14:45:27.857862+00:00 [queued]>
+[2025-02-23T14:45:30.215+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-02-23T14:45:30.233+0000] {taskinstance.py:2890} INFO - Executing <Task(SparkSubmitOperator): extract_task> on 2025-02-23 14:45:27.857862+00:00
+[2025-02-23T14:45:30.240+0000] {standard_task_runner.py:72} INFO - Started process 4269 to run task
+[2025-02-23T14:45:30.245+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', '***_v2_etl_dag', 'extract_task', 'manual__2025-02-23T14:45:27.857862+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/***_v2_etl_dag.py', '--cfg-path', '/tmp/tmp3equvjox']
+[2025-02-23T14:45:30.250+0000] {standard_task_runner.py:105} INFO - Job 22: Subtask extract_task
+[2025-02-23T14:45:30.275+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-02-23T14:45:30.332+0000] {task_command.py:467} INFO - Running <TaskInstance: finprode8_v2_etl_dag.extract_task manual__2025-02-23T14:45:27.857862+00:00 [running]> on host ***-airflow-scheduler
+[2025-02-23T14:45:30.435+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ratih malini' AIRFLOW_CTX_DAG_ID='***_v2_etl_dag' AIRFLOW_CTX_TASK_ID='extract_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-23T14:45:27.857862+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-23T14:45:27.857862+00:00'
+[2025-02-23T14:45:30.438+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-02-23T14:45:30.474+0000] {base.py:84} INFO - Retrieving connection 'spark_main'
+[2025-02-23T14:45:30.477+0000] {spark_submit.py:474} INFO - Spark-Submit cmd: spark-submit --master spark://***-spark-master:7077 --name arrow-spark /spark-scripts/***_v2_extract.py
+[2025-02-23T14:45:33.255+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO SparkContext: Running Spark version 3.3.2
+[2025-02-23T14:45:33.318+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-02-23T14:45:33.422+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO ResourceUtils: ==============================================================
+[2025-02-23T14:45:33.424+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2025-02-23T14:45:33.425+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO ResourceUtils: ==============================================================
+[2025-02-23T14:45:33.427+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO SparkContext: Submitted application: ***_extract
+[2025-02-23T14:45:33.451+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2025-02-23T14:45:33.459+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO ResourceProfile: Limiting resource is cpu
+[2025-02-23T14:45:33.462+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2025-02-23T14:45:33.511+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO SecurityManager: Changing view acls to: airflow
+[2025-02-23T14:45:33.513+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO SecurityManager: Changing modify acls to: airflow
+[2025-02-23T14:45:33.514+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO SecurityManager: Changing view acls groups to:
+[2025-02-23T14:45:33.515+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO SecurityManager: Changing modify acls groups to:
+[2025-02-23T14:45:33.517+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(airflow); groups with view permissions: Set(); users  with modify permissions: Set(airflow); groups with modify permissions: Set()
+[2025-02-23T14:45:33.828+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO Utils: Successfully started service 'sparkDriver' on port 37595.
+[2025-02-23T14:45:33.864+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO SparkEnv: Registering MapOutputTracker
+[2025-02-23T14:45:33.913+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO SparkEnv: Registering BlockManagerMaster
+[2025-02-23T14:45:33.941+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2025-02-23T14:45:33.943+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2025-02-23T14:45:33.948+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2025-02-23T14:45:33.971+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-ec2f4f9e-24ba-45b7-ae11-901510be95a5
+[2025-02-23T14:45:33.990+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:33 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2025-02-23T14:45:34.009+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:34 INFO SparkEnv: Registering OutputCommitCoordinator
+[2025-02-23T14:45:34.236+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:34 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2025-02-23T14:45:34.365+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:34 INFO Executor: Starting executor ID driver on host ***-airflow-scheduler
+[2025-02-23T14:45:34.378+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:34 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2025-02-23T14:45:34.398+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:34 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 32977.
+[2025-02-23T14:45:34.400+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:34 INFO NettyBlockTransferService: Server created on ***-airflow-scheduler:32977
+[2025-02-23T14:45:34.401+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:34 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2025-02-23T14:45:34.410+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:34 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ***-airflow-scheduler, 32977, None)
+[2025-02-23T14:45:34.413+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:34 INFO BlockManagerMasterEndpoint: Registering block manager ***-airflow-scheduler:32977 with 434.4 MiB RAM, BlockManagerId(driver, ***-airflow-scheduler, 32977, None)
+[2025-02-23T14:45:34.416+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:34 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ***-airflow-scheduler, 32977, None)
+[2025-02-23T14:45:34.417+0000] {spark_submit.py:641} INFO - 25/02/23 14:45:34 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ***-airflow-scheduler, 32977, None)
+[2025-02-23T14:45:40.977+0000] {spark_submit.py:641} INFO - Traceback (most recent call last):
+[2025-02-23T14:45:40.979+0000] {spark_submit.py:641} INFO - File "/spark-scripts/***_v2_extract.py", line 47, in <module>
+[2025-02-23T14:45:40.980+0000] {spark_submit.py:641} INFO - extract()
+[2025-02-23T14:45:40.980+0000] {spark_submit.py:641} INFO - File "/spark-scripts/***_v2_extract.py", line 32, in extract
+[2025-02-23T14:45:40.982+0000] {spark_submit.py:641} INFO - df.write.mode("overwrite").parquet("/scripts/extracted.parquet")
+[2025-02-23T14:45:40.983+0000] {spark_submit.py:641} INFO - File "/home/airflow/.local/lib/python3.9/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 1140, in parquet
+[2025-02-23T14:45:40.984+0000] {spark_submit.py:641} INFO - File "/home/airflow/.local/lib/python3.9/site-packages/pyspark/python/lib/py4j-0.10.9.5-src.zip/py4j/java_gateway.py", line 1321, in __call__
+[2025-02-23T14:45:40.985+0000] {spark_submit.py:641} INFO - File "/home/airflow/.local/lib/python3.9/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 190, in deco
+[2025-02-23T14:45:40.986+0000] {spark_submit.py:641} INFO - File "/home/airflow/.local/lib/python3.9/site-packages/pyspark/python/lib/py4j-0.10.9.5-src.zip/py4j/protocol.py", line 326, in get_return_value
+[2025-02-23T14:45:40.987+0000] {spark_submit.py:641} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o32.parquet.
+[2025-02-23T14:45:40.988+0000] {spark_submit.py:641} INFO - : ExitCodeException exitCode=1: chmod: changing permissions of '/scripts/extracted.parquet': Operation not permitted
+[2025-02-23T14:45:40.988+0000] {spark_submit.py:641} INFO - 
+[2025-02-23T14:45:40.989+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.util.Shell.runCommand(Shell.java:1007)
+[2025-02-23T14:45:40.991+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.util.Shell.run(Shell.java:900)
+[2025-02-23T14:45:40.992+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:1212)
+[2025-02-23T14:45:40.994+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.util.Shell.execCommand(Shell.java:1306)
+[2025-02-23T14:45:40.995+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.util.Shell.execCommand(Shell.java:1288)
+[2025-02-23T14:45:40.996+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:978)
+[2025-02-23T14:45:40.997+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.fs.RawLocalFileSystem.mkOneDirWithMode(RawLocalFileSystem.java:660)
+[2025-02-23T14:45:40.998+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:700)
+[2025-02-23T14:45:40.998+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:672)
+[2025-02-23T14:45:40.999+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:699)
+[2025-02-23T14:45:41.000+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:672)
+[2025-02-23T14:45:41.001+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:699)
+[2025-02-23T14:45:41.002+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:672)
+[2025-02-23T14:45:41.003+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.fs.ChecksumFileSystem.mkdirs(ChecksumFileSystem.java:788)
+[2025-02-23T14:45:41.004+0000] {spark_submit.py:641} INFO - at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.setupJob(FileOutputCommitter.java:356)
+[2025-02-23T14:45:41.005+0000] {spark_submit.py:641} INFO - at org.apache.spark.internal.io.HadoopMapReduceCommitProtocol.setupJob(HadoopMapReduceCommitProtocol.scala:188)
+[2025-02-23T14:45:41.006+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:219)
+[2025-02-23T14:45:41.007+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:186)
+[2025-02-23T14:45:41.009+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:113)
+[2025-02-23T14:45:41.010+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:111)
+[2025-02-23T14:45:41.011+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.command.DataWritingCommandExec.executeCollect(commands.scala:125)
+[2025-02-23T14:45:41.012+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:98)
+[2025-02-23T14:45:41.013+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:109)
+[2025-02-23T14:45:41.014+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:169)
+[2025-02-23T14:45:41.015+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:95)
+[2025-02-23T14:45:41.016+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:779)
+[2025-02-23T14:45:41.016+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+[2025-02-23T14:45:41.017+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+[2025-02-23T14:45:41.018+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:94)
+[2025-02-23T14:45:41.019+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:584)
+[2025-02-23T14:45:41.020+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:176)
+[2025-02-23T14:45:41.021+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:584)
+[2025-02-23T14:45:41.021+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:30)
+[2025-02-23T14:45:41.023+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+[2025-02-23T14:45:41.024+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+[2025-02-23T14:45:41.026+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
+[2025-02-23T14:45:41.027+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
+[2025-02-23T14:45:41.028+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:560)
+[2025-02-23T14:45:41.029+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:94)
+[2025-02-23T14:45:41.030+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:81)
+[2025-02-23T14:45:41.031+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:79)
+[2025-02-23T14:45:41.032+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:116)
+[2025-02-23T14:45:41.033+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:860)
+[2025-02-23T14:45:41.034+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:390)
+[2025-02-23T14:45:41.035+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:363)
+[2025-02-23T14:45:41.035+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
+[2025-02-23T14:45:41.036+0000] {spark_submit.py:641} INFO - at org.apache.spark.sql.DataFrameWriter.parquet(DataFrameWriter.scala:793)
+[2025-02-23T14:45:41.037+0000] {spark_submit.py:641} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2025-02-23T14:45:41.038+0000] {spark_submit.py:641} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+[2025-02-23T14:45:41.039+0000] {spark_submit.py:641} INFO - at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2025-02-23T14:45:41.039+0000] {spark_submit.py:641} INFO - at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+[2025-02-23T14:45:41.040+0000] {spark_submit.py:641} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2025-02-23T14:45:41.042+0000] {spark_submit.py:641} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2025-02-23T14:45:41.043+0000] {spark_submit.py:641} INFO - at py4j.Gateway.invoke(Gateway.java:282)
+[2025-02-23T14:45:41.044+0000] {spark_submit.py:641} INFO - at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2025-02-23T14:45:41.045+0000] {spark_submit.py:641} INFO - at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2025-02-23T14:45:41.046+0000] {spark_submit.py:641} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2025-02-23T14:45:41.047+0000] {spark_submit.py:641} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2025-02-23T14:45:41.048+0000] {spark_submit.py:641} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-02-23T14:45:41.049+0000] {spark_submit.py:641} INFO - 
+[2025-02-23T14:45:41.213+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 177, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 567, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://***-spark-master:7077 --name arrow-spark /spark-scripts/***_v2_extract.py. Error code is: 1.
+[2025-02-23T14:45:41.230+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=***_v2_etl_dag, task_id=extract_task, run_id=manual__2025-02-23T14:45:27.857862+00:00, execution_date=20250223T144527, start_date=20250223T144530, end_date=20250223T144541
+[2025-02-23T14:45:41.276+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-02-23T14:45:41.278+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 22 for task extract_task (Cannot execute: spark-submit --master spark://***-spark-master:7077 --name arrow-spark /spark-scripts/***_v2_extract.py. Error code is: 1.; 4269)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 177, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 567, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://***-spark-master:7077 --name arrow-spark /spark-scripts/***_v2_extract.py. Error code is: 1.
+[2025-02-23T14:45:41.328+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-23T14:45:41.361+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-23T14:45:41.371+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

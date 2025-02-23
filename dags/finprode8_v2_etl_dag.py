@@ -11,7 +11,7 @@ spark_dag = DAG(
     dag_id="finprode8_v2_etl_dag",
     default_args=default_args,
     schedule_interval=None,
-    description="Test v2 for spark submit",
+    description="Finpro DE8 V2 - Ratih Malini",
     start_date=days_ago(1),
 )
 
