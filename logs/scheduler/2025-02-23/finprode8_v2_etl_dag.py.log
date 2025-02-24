@@ -4356,3 +4356,164 @@
 [2025-02-23T19:20:48.108+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:20:48.107+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-02-23T19:20:48.127+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:20:48.126+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
 [2025-02-23T19:20:48.155+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.118 seconds
+[2025-02-23T19:21:18.279+0000] {processor.py:186} INFO - Started process (PID=10277) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:21:18.280+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:21:18.282+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:21:18.282+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:21:18.309+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:21:18.342+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:21:18.342+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:21:18.356+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:21:18.356+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:21:18.379+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.106 seconds
+[2025-02-23T19:21:48.585+0000] {processor.py:186} INFO - Started process (PID=10282) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:21:48.586+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:21:48.590+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:21:48.590+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:21:48.639+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:21:48.694+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:21:48.694+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:21:48.710+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:21:48.709+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:21:48.734+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.158 seconds
+[2025-02-23T19:22:18.855+0000] {processor.py:186} INFO - Started process (PID=10287) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:22:18.857+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:22:18.860+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:22:18.860+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:22:18.887+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:22:18.942+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:22:18.941+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:22:18.958+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:22:18.958+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:22:18.983+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.137 seconds
+[2025-02-23T19:22:49.143+0000] {processor.py:186} INFO - Started process (PID=10292) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:22:49.145+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:22:49.148+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:22:49.148+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:22:49.201+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:22:49.293+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:22:49.291+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:22:49.327+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:22:49.326+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:22:49.394+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.257 seconds
+[2025-02-23T19:23:19.638+0000] {processor.py:186} INFO - Started process (PID=10297) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:23:19.640+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:23:19.644+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:23:19.643+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:23:19.680+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:23:19.728+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:23:19.727+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:23:19.752+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:23:19.752+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:23:19.795+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.164 seconds
+[2025-02-23T19:23:49.919+0000] {processor.py:186} INFO - Started process (PID=10302) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:23:49.921+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:23:49.924+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:23:49.924+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:23:49.955+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:23:49.989+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:23:49.988+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:23:50.009+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:23:50.008+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:23:50.041+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.128 seconds
+[2025-02-23T19:24:20.415+0000] {processor.py:186} INFO - Started process (PID=10307) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:24:20.418+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:24:20.421+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:24:20.421+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:24:20.467+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:24:20.527+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:24:20.527+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:24:20.545+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:24:20.545+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:24:20.573+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.164 seconds
+[2025-02-23T19:24:50.896+0000] {processor.py:186} INFO - Started process (PID=10312) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:24:50.898+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:24:50.901+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:24:50.901+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:24:50.949+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:24:51.084+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:24:51.084+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:24:51.101+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:24:51.101+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:24:51.132+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.244 seconds
+[2025-02-23T19:25:21.400+0000] {processor.py:186} INFO - Started process (PID=10317) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:25:21.401+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:25:21.404+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:25:21.404+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:25:21.448+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:25:21.525+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:25:21.524+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:25:21.568+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:25:21.567+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:25:21.607+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.219 seconds
+[2025-02-23T19:25:51.880+0000] {processor.py:186} INFO - Started process (PID=10322) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:25:51.882+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:25:51.886+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:25:51.885+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:25:51.924+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:25:51.978+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:25:51.978+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:25:52.011+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:25:52.011+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:25:52.045+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.172 seconds
+[2025-02-23T19:26:22.314+0000] {processor.py:186} INFO - Started process (PID=10327) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:26:22.321+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:26:22.332+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:26:22.330+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:26:22.375+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:26:22.496+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:26:22.496+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:26:22.568+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:26:22.568+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:26:22.608+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.320 seconds
+[2025-02-23T19:26:52.856+0000] {processor.py:186} INFO - Started process (PID=10332) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:26:52.859+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:26:52.862+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:26:52.862+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:26:52.902+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:26:52.965+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:26:52.965+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:26:52.997+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:26:52.996+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:26:53.030+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.184 seconds
+[2025-02-23T19:27:23.341+0000] {processor.py:186} INFO - Started process (PID=10337) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:27:23.347+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:27:23.358+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:27:23.358+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:27:23.391+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:27:23.432+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:27:23.432+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:27:23.462+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:27:23.462+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:27:23.507+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.203 seconds
+[2025-02-23T19:27:53.780+0000] {processor.py:186} INFO - Started process (PID=10342) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:27:53.783+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:27:53.787+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:27:53.786+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:27:53.834+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:27:53.899+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:27:53.899+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:27:53.938+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:27:53.937+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:27:53.978+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.209 seconds
+[2025-02-23T19:28:24.246+0000] {processor.py:186} INFO - Started process (PID=10347) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:28:24.248+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:28:24.252+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:28:24.251+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:28:24.293+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:28:24.335+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:28:24.335+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:28:24.351+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:28:24.351+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:28:24.378+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.141 seconds
+[2025-02-23T19:28:54.538+0000] {processor.py:186} INFO - Started process (PID=10352) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:28:54.540+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:28:54.546+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:28:54.546+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:28:54.582+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:28:54.620+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:28:54.620+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:28:54.639+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:28:54.639+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:28:54.667+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.136 seconds
+[2025-02-23T19:29:24.823+0000] {processor.py:186} INFO - Started process (PID=10357) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:29:24.825+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:29:24.827+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:29:24.827+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:29:24.855+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:29:24.888+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:29:24.888+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:29:24.903+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:29:24.903+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:29:24.931+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.116 seconds
+[2025-02-23T19:29:55.148+0000] {processor.py:186} INFO - Started process (PID=10362) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:29:55.149+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:29:55.152+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:29:55.151+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:29:55.190+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:29:55.221+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:29:55.221+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:29:55.237+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:29:55.237+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:29:55.262+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.121 seconds
+[2025-02-23T19:30:25.449+0000] {processor.py:186} INFO - Started process (PID=10367) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:30:25.451+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:30:25.454+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:30:25.453+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:30:25.492+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:30:25.536+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:30:25.535+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:30:25.598+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:30:25.598+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:30:25.683+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.240 seconds
+[2025-02-23T19:30:55.929+0000] {processor.py:186} INFO - Started process (PID=10372) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:30:55.931+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:30:55.935+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:30:55.934+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:30:55.989+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:30:56.195+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:30:56.195+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:30:56.218+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:30:56.218+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:30:56.247+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.326 seconds
+[2025-02-23T19:31:26.509+0000] {processor.py:186} INFO - Started process (PID=10377) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:31:26.512+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:31:26.520+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:31:26.520+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:31:26.548+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:31:26.589+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:31:26.589+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:31:26.608+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:31:26.607+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:31:26.636+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.142 seconds
+[2025-02-23T19:31:56.789+0000] {processor.py:186} INFO - Started process (PID=10382) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:31:56.790+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:31:56.793+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:31:56.793+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:31:56.829+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:31:56.864+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:31:56.864+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:31:56.882+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:31:56.882+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:31:56.910+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.129 seconds
+[2025-02-23T19:32:27.127+0000] {processor.py:186} INFO - Started process (PID=10387) to work on /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:32:27.129+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/finprode8_v2_etl_dag.py for tasks to queue
+[2025-02-23T19:32:27.133+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:32:27.132+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:32:27.171+0000] {processor.py:925} INFO - DAG(s) 'finprode8_v2_etl_dag' retrieved from /opt/airflow/dags/finprode8_v2_etl_dag.py
+[2025-02-23T19:32:27.202+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:32:27.202+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-23T19:32:27.217+0000] {logging_mixin.py:190} INFO - [2025-02-23T19:32:27.217+0000] {dag.py:4180} INFO - Setting next_dagrun for finprode8_v2_etl_dag to None, run_after=None
+[2025-02-23T19:32:27.242+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/finprode8_v2_etl_dag.py took 0.121 seconds
